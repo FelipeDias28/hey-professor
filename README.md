@@ -6,3 +6,11 @@ https://laravel.com/docs/10.x/pint
 ```
 ./vendor/bin/pint
 ```
+
+## Larastan
+- Documentação
+https://github.com/larastan/larastan
+- Rodar o Larastan
+```
+./vendor/bin/phpstan analyse
+```
