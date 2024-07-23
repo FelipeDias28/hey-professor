@@ -30,6 +30,9 @@ jobs:
         touch database/database.sqlite
 
 # Antes de Rodar os testes
+    - name: Installing Package.json
+      run: npm run install
+      
     - name: Build Assets
       run: npm run build
       
