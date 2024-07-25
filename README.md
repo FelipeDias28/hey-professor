@@ -14,3 +14,7 @@ https://github.com/larastan/larastan
 ```
 ./vendor/bin/phpstan analyse
 ```
+
+## DebugBar
+- Documentação
+https://github.com/barryvdh/laravel-debugbar
