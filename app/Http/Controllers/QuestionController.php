@@ -19,7 +19,7 @@ class QuestionController extends Controller
                         if ($value[strlen($value) - 1] != '?') { // Verificando se a última posição não é um ponto de interrogação
                             $fail('Are you Sure tath is a question? It is missing the question mark in the end.');
                         }
-                    }
+                    },
                 ],
             ])
         );

@@ -2,10 +2,7 @@
 
 use App\Models\User;
 
-use function Pest\Laravel\actingAs;
-use function Pest\Laravel\assertDatabaseCount;
-use function Pest\Laravel\assertDatabaseHas;
-use function Pest\Laravel\post;
+use function Pest\Laravel\{actingAs, assertDatabaseCount, assertDatabaseHas, post};
 
 it('should be able to create a new question bigger than 255 characters', function () {
     // AAA
@@ -13,7 +10,7 @@ it('should be able to create a new question bigger than 255 characters', functio
     $user = User::factory()->create();
     actingAs($user);
 
-    // Act - Agir 
+    // Act - Agir
     $request = post(route('question.store', [
         'question' => str_repeat('*', 260) . '?',
     ]));
@@ -29,7 +26,7 @@ it('should check id ends with question mark ?', function () {
     $user = User::factory()->create();
     actingAs($user);
 
-    // Act - Agir 
+    // Act - Agir
     $request = post(route('question.store', [
         'question' => str_repeat('*', 10),
     ]));
@@ -46,7 +43,7 @@ it('should have at last 10 characteres', function () {
     $user = User::factory()->create();
     actingAs($user);
 
-    // Act - Agir 
+    // Act - Agir
     $request = post(route('question.store', [
         'question' => str_repeat('*', 8) . '?',
     ]));
