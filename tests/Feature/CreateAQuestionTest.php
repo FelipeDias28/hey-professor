@@ -28,4 +28,19 @@ it('should check id ends with question mark ?', function () {
 })->todo();
 
 it('should have at last 10 characteres', function () {
-})->todo();
+    // Arrange - Preparar (preparar o ambiente para executar os testes)
+    $user = User::factory()->create();
+    actingAs($user);
+
+    // Act - Agir 
+    $request = post(route('question.store', [
+        'question' => str_repeat('*', 8) . '?',
+    ]));
+
+    // Assert - Verificar
+    $request->assertSessionHasErrors(
+        // Ao invés de passar o texto de erro, passa a chave da validação
+        ['question' => __('validation.min.string', ['min' => 10, 'attribute' => 'question'])]
+    );
+    assertDatabaseCount('questions', 0);
+});
