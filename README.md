@@ -22,7 +22,22 @@ https://github.com/larastan/larastan
 - Documentação
 https://github.com/barryvdh/laravel-debugbar
 
-# Artisan
+## Rodar o servidor local
+### Instalação das configs
+```
+npm install 
+```
+
+### Abrir os servidores
+- Será preciso dois terminais abertos
+```
+npm run dev
+```
+```
+php artisan serve
+```
+
+# Comandos Artisan
 
 ## Rodar Servidor
 ```
