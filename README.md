@@ -78,3 +78,7 @@ php artisan make:request
 ```
 php artisan make:migration
 ```
+
+# Componentes
+## Utiliza o FlowBite
+https://flowbite.com/docs/getting-started/introduction/
