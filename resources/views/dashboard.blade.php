@@ -7,29 +7,8 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <form action="{{ route('question.store') }}" method="post">
-                @csrf
-
-                <div class="mb-4">
-                    <label 
-                        for="question" 
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                        Question
-                    </label>
-                    <textarea 
-                        name="question"
-                        id="question" rows="4" 
-                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
-                            border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700
-                            dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                            dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                        placeholder="Ask me anything...">{{ old('question') }}</textarea>
-
-                    @error('question')
-                        <span class="text-red-400">{{ $message }}</span>
-                    @enderror
-                </div>
+            <x-form post :action="route('question.store')">
+                <x-textarea label="Question" name="question" />
 
                 <button
                     type="submit"
@@ -50,7 +29,7 @@
                     >
                     Cancel
                 </button>
-            </form>
+            </x-form>
         </div>
     </div>
 </x-app-layout>
