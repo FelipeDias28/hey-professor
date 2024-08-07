@@ -21,4 +21,64 @@ https://github.com/larastan/larastan
 ## DebugBar
 - Documentação
 https://github.com/barryvdh/laravel-debugbar
-=======
+
+## Rodar o servidor local
+### Instalação das configs
+```
+npm install 
+```
+
+### Abrir os servidores
+- Será preciso dois terminais abertos
+```
+npm run dev
+```
+```
+php artisan serve
+```
+
+# Comandos Artisan
+
+## Rodar Servidor
+```
+php artisan serve
+```
+
+## Create Factory
+```
+php artisan make:factory
+```
+
+## Preencher banco com os seeds
+```
+php artisan migrate:fresh --seed
+```
+
+## Criar Seeder
+```
+php artisan make:seeder
+```
+
+## Criar Model
+```
+php artisan make:model
+```
+
+## Criar Controller
+```
+php artisan make:controller
+```
+
+## Criar Request
+```
+php artisan make:request
+```
+
+## Criar Migration
+```
+php artisan make:migration
+```
+
+# Componentes
+## Utiliza o FlowBite
+https://flowbite.com/docs/getting-started/introduction/
