@@ -18,9 +18,9 @@
         {{-- O dark antes diz que se estiver no dark-mode esse vai ser o estilo utilizado --}}
         <div class="dark:text-gray-600 uppercase font-bold mb-2">List Of Questions</div>
 
-        <div class="dark:text-gray-400">
+        <div class="dark:text-gray-400 space-y-4">
             @foreach ($questions as $item)
-                <div>{{ $item->question }}</div>
+                <x-question :question="$item->question" />
             @endforeach
         </div>
     </x-container>
