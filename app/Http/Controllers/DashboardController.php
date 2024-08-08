@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Question;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     // Quando só tem uma função não precisa passar método no web.php
 
-    public function __invoke()
+    public function __invoke(): View
     {
         return view('dashboard', [
             'questions' => Question::all(),
