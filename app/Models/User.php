@@ -47,6 +47,9 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     // Avisando que meu usuário terá muitas votações
+    /**
+     * @return HasMany<Vote>
+     */
     public function votes(): HasMany
     {
         return $this->hasMany(Vote::class);
