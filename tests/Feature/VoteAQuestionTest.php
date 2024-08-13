@@ -1,14 +1,11 @@
 <?php
 
-use App\Models\Question;
-use App\Models\User;
+use App\Models\{Question, User};
 
-use function Pest\Laravel\actingAs;
-use function Pest\Laravel\assertDatabaseHas;
-use function Pest\Laravel\post;
+use function Pest\Laravel\{actingAs, assertDatabaseHas, post};
 
 it('should be able to like a question', function () {
-    $user = User::factory()->create();
+    $user     = User::factory()->create();
     $question = Question::factory()->create();
 
     actingAs($user);
@@ -18,8 +15,8 @@ it('should be able to like a question', function () {
 
     assertDatabaseHas('votes', [
         'question_id' => $question->id,
-        'user_id' => $user->id,
-        'like' => 1,
-        'unlike' => 0,
+        'user_id'     => $user->id,
+        'like'        => 1,
+        'unlike'      => 0,
     ]);
 });

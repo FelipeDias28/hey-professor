@@ -1,14 +1,12 @@
 <?php
 
-use App\Models\Question;
-use App\Models\User;
+use App\Models\{Question, User};
 
-use function Pest\Laravel\actingAs;
-use function Pest\Laravel\get;
+use function Pest\Laravel\{actingAs, get};
 
 it('shold list all questions', function () {
     // Arrage -> criar algumas perguntas
-    $user = User::factory()->create();
+    $user      = User::factory()->create();
     $questions = Question::factory()->count(5)->create();
 
     actingAs($user);
