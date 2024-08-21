@@ -82,3 +82,7 @@ php artisan make:migration
 # Componentes
 ## Utiliza o FlowBite
 https://flowbite.com/docs/getting-started/introduction/
+
+# Icones
+## Utiliza o HeroIcons
+https://heroicons.com/
