@@ -3,7 +3,7 @@
     'post' => null,
     'put' => null,
     'delete' => null,
-]);
+])
 
 <form action="{{ $action }}" method="post">
     @csrf
