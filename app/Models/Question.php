@@ -18,14 +18,4 @@ class Question extends Model
     {
         return $this->hasMany(Vote::class);
     }
-
-    public function likes(): CastsAttribute
-    {
-        return new CastsAttribute(get: fn () => $this->votes()->sum('like'));
-    }
-
-    public function unlikes(): CastsAttribute
-    {
-        return new CastsAttribute(get: fn () => $this->votes()->sum('unlike'));
-    }
 }
