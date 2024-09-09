@@ -10,5 +10,6 @@ function user(): ?User
         return auth()->user();
     }
 
-    return null;;
+    return null;
+    ;
 }
