@@ -94,6 +94,18 @@ php artisan make:model
 php artisan make:controller
 ```
 
+-   Criar Controller já com nome
+
+```
+php artisan make:controller QuestionController
+```
+
+-   Criar Controller já com nome e dentro de um diretório
+
+```
+php artisan make:controller Question\LikeController
+```
+
 ## Criar Request
 
 ```
