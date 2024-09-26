@@ -55,3 +55,20 @@ it('should have at last 10 characteres', function () {
     );
     assertDatabaseCount('questions', 0);
 });
+
+it('should create as a draft all the time', function () {
+    // Arrange - Preparar (preparar o ambiente para executar os testes)
+    $user = User::factory()->create();
+    actingAs($user);
+
+    // Act - Agir
+    post(route('question.store', [
+        'question' => str_repeat('*', 256) . '?',
+    ]));
+
+    // Assert - Verificar
+    assertDatabaseHas('questions', [
+        'question' => str_repeat('*', 256) . '?',
+        'draft'    => true,
+    ]);
+});
