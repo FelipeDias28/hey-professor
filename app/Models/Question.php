@@ -10,9 +10,12 @@ class Question extends Model
 {
     use HasFactory;
 
-    protected $cast = [
-        'draft' => 'bool',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'draft' => 'boolean',
+        ];
+    }
 
     /**
      * @return HasMany<Vote>
