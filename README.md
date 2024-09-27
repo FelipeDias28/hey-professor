@@ -118,6 +118,12 @@ php artisan make:request
 php artisan make:migration
 ```
 
+## Criar Policy
+
+```
+php artisan make:policy
+```
+
 # Componentes
 
 ## Utiliza o FlowBite

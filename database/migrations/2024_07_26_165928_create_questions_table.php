@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class() extends Migration {
     /**
      * Run the migrations.
      */
@@ -12,6 +13,7 @@ return new class () extends Migration {
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(User::class, 'created_by');
             $table->text('question');
             $table->boolean('draft')->default(false);
             $table->timestamps();
