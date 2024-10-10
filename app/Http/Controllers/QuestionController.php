@@ -22,10 +22,12 @@ class QuestionController extends Controller
             ],
         ]);
 
-        Question::query()->create([
-            'question' => request()->question,
-            'draft'    => true,
-        ]);
+        user()
+            ->questions()
+            ->create([
+                'question' => request()->question,
+                'draft'    => true,
+            ]);
 
         return to_route('dashboard');
     }
